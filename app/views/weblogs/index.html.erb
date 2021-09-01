@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weblogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th>Content</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weblogs.each do |weblog| %>
+      <tr>
+        <td><%= weblog.title %></td>
+        <td><%= weblog. %></td>
+        <td><%= weblog.content %></td>
+        <td><%= weblog. %></td>
+        <td><%= link_to 'Show', weblog %></td>
+        <td><%= link_to 'Edit', edit_weblog_path(weblog) %></td>
+        <td><%= link_to 'Destroy', weblog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weblog', new_weblog_path %>
